@@ -54,7 +54,7 @@ With this package, it is provisioned to connect / send messages into different c
         // 
         
         // this line of code would push message into channel channel-id-#0002
-    	_, _, err := client.RefreshChannelID("channel-id-#0002").PushMessage("pushed data into channel-id-#0002")
+    	_, _, err := client.Channel("channel-id-#0002").PushMessage("pushed data into channel-id-#0002")
 
 
         // push message into channel channel-id-#0001
@@ -74,7 +74,7 @@ The above line will push message into channel channel-id-#0001
 
 
 ```go
-    _, _, err := client.RefreshChannelID("channel-id-#0002").PushMessage("pushed data into channel-id-#0002")
+    _, _, err := client.Channel("channel-id-#0002").PushMessage("pushed data into channel-id-#0002")
 ```
 We need to push data into another channel but the next time when we use `client` object it should push the message into the default one (channel-id-#0001)
 

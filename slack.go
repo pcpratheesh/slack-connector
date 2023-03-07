@@ -55,7 +55,7 @@ func WithSlackAPIInit() Option {
 	}
 }
 
-// RefreshChannelID
+// Channel
 // This should be value receiver type
 func (client slackClient) Channel(channel string) *slackClient {
 	client.channelID = channel
